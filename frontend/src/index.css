@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+@layer base {
+  .btn {
+    @apply rounded-md border px-6 py-3 text-white tracking-wide font-inter duration-150 ease-in;
+  }
+
+  .btn-primary {
+    @apply bg-blue border-blue  hover:bg-blue/90 hover:border-blue/90;
+  }
+
+  .btn-primary-disabled {
+    @apply bg-blue/70 border-blue/70 cursor-not-allowed;
+  }
+
+  .btn-yellow {
+    @apply bg-orange border-orange hover:bg-orange/90 hover:border-orange/90;
+  }
+
+  .btn-danger {
+    @apply bg-danger border-danger hover:bg-danger/90 hover:border-danger/90;
+  }
+
+  .btn-success {
+    @apply bg-success border-success hover:bg-success/90 hover:border-success/90;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-dark;
+  }
+
+  p,
+  span,
+  strong {
+    @apply text-dark;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  li {
+    @apply cursor-pointer;
+  }
+
+  .input {
+    @apply outline-none border border-[#adadad] px-3 py-4 rounded-[5px] w-full text-[#264653] text-sm;
+  }
+  .input:focus,
+  .input:hover {
+    @apply border border-[#2a9d8f];
+  }
+
+  .card {
+    @apply bg-white rounded-lg p-6 border border-blue/5;
+  }
+
+  .card-error-validation {
+    @apply bg-danger px-5 py-2 rounded-[5px] text-white;
+  }
+
+  .error-validation {
+    @apply text-danger text-sm mt-1;
+  }
+
+  .border-error-validation {
+    @apply border border-danger;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "sans-serif";
+}
+
+/* Custome classes */
+
+::selection {
+  background: #16cfba;
+}
+
+.custome-shadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.custome-shadow-sm {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* Components */
+
+.auth {
+  background-image: url("./assets/login-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background-image: url("./assets/login-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sidebar {
+  position: relative;
+  z-index: 1;
+}
+.sidebar.fixed {
+  position: absolute;
+}
+
+/* Swipper  */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  background-color: #2a9d8f;
+  width: 30px;
+  height: 31px;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  font-size: 20px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  font-size: 20px;
+}
+
+/* React Select */
+.css-1pahdxg-control {
+  border-color: #2a9d8f !important;
+  box-shadow: 0 0 0 1px #2a9d8f !important;
+}
+
+/* React rater star */
+.react-rater-star {
+  font-size: 3rem !important;
+  color: #e9c56a60 !important;
+}
+.react-rater-star.will-be-active {
+  color: #f0c14c !important;
+}
+.react-rater-star:hover {
+  color: #f0c14c !important;
+}
+.react-rater-star.is-active {
+  color: #f0c14c !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #2a9d902f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2a9d90ab;
+  border-radius: 10px;
+}
+
+.select__control {
+  height: 50px !important;
+}
+
+.file-input__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-input__label {
+  cursor: pointer;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2a9d8f !important;
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: #2a9d9028;
+  border: 1px solid #2a9d9057;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.file-input__label > span {
+  color: #2a9d8f !important;
+}
